@@ -6,7 +6,7 @@ const fs = require("fs");
 require("dotenv").config();
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(express.json());
 app.use(
@@ -71,7 +71,7 @@ app.post("/message", (req, res) => {
     // Create mail options for the hardcoded recipient
     const mailOptionsToTrueCut = {
       from: process.env.EMAIL_USERNAME,
-      to: "rback499@gmail.com", // Hardcoded recipient
+      to: "truecutbarberstudio@gmail.com", // Hardcoded recipient
       subject: `New Message Recieved: ${subject}`,
       html: `<!DOCTYPE html>
         <html lang="en">
